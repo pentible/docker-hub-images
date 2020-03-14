@@ -26,10 +26,10 @@ RUN helm plugin install https://github.com/databus23/helm-diff
 
 # tiller
 RUN curl -L 'https://storage.googleapis.com/kubernetes-helm/helm-v2.13.1-linux-amd64.tar.gz' --output /tmp/helm.tar.gz \
-	&& mkdir /tmp/helm \
-	&& tar xvzf /tmp/helm.tar.gz -C /tmp/helm \
-	&& mv /tmp/helm/linux-amd64/tiller /usr/local/bin/tiller \
-	&& rm -r /tmp/helm /tmp/helm.tar.gz
+    && mkdir /tmp/helm \
+    && tar xvzf /tmp/helm.tar.gz -C /tmp/helm \
+    && mv /tmp/helm/linux-amd64/tiller /usr/local/bin/tiller \
+    && rm -r /tmp/helm /tmp/helm.tar.gz
 
 # helmfile
 RUN curl -L 'https://github.com/roboll/helmfile/releases/download/v0.59.0/helmfile_linux_amd64' --output /usr/local/bin/helmfile
